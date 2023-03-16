@@ -1,0 +1,46 @@
+﻿@using WebQuanLyBanHoa.Models
+@model IEnumerable<SanPham>
+
+<div class="related-products vertical-products white-box">
+    <h3>Sản phẩm giá rẻ</h3>
+    <hr />
+    <div class="vertical-products-carousel owl-carousel owl-loaded">
+        <div class="owl-stage-outer" style="width: 100%;">
+            <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s;">
+                @foreach (var item in Model)
+                {
+                    <div class="owl-item active" style="width: 100%; margin-bottom:10px;">
+                        <div class="product">
+                            <a href="@Url.Action("XemChiTiet","SanPham", new { @id = item.MaSP})" class="product-item">
+                                <div class="image-wrap">
+                                    <img src="@Url.Content("~/Content/HinhAnh/"+item.HinhAnh)">
+                                </div>
+                                <p class="price-old-percentage hidden-xs"></p>
+                                <div class="caption" style="width: 100%; text-align:center;">
+                                    <p class="title">@item.TenSP</p>
+                                    <p class="price">@item.DonGia.Value.ToString("#,##") đ</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+</div>
+</div>
+<style>
+    .vertical-products .product-item .image-wrap {
+
+        text-align: center;
+    }
+        .vertical-products .product-item .image-wrap img {
+            max-width: 100%;
+        }
+    h3 {
+        font-size: 20px;
+        color: red;
+        margin-bottom: 5px;
+    }
+</style>

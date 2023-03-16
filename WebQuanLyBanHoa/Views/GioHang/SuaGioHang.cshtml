@@ -1,0 +1,91 @@
+﻿@using WebQuanLyBanHoa.Models
+@model ItemGioHang
+
+@{
+    ViewBag.Title = "SuaGioHang";
+    Layout = "~/Views/Layout/ProductLayout.cshtml";
+}
+
+@{
+    List<ItemGioHang> lstGioHang = ViewBag.GioHang as List<ItemGioHang>;
+}
+
+<table class="table">
+    <tr style="background-color:papayawhip;">
+        <td>Mã SP</td>
+        <td>Tên SP</td>
+        <td>Hình Ảnh</td>
+        <td>Đơn Giá</td>
+        <td>Số Lượng</td>
+        <td>Thành tiền</td>
+        <td>Tác vụ khác</td>
+    </tr>
+    @foreach (var item in lstGioHang)
+    {
+        if (Model.MaSP == item.MaSP)
+        {
+
+
+            using (Html.BeginForm("CapNhatGioHang", "GioHang"))
+            {
+                <tr>
+                    <td>@item.MaSP @Html.Hidden("MaSP", item.MaSP)</td>
+                    <td>@item.TenSP</td>
+                    <td><img src="@Url.Content("~/Content/HinhAnh/"+item.HinhAnh)" width="100" height="100" /></td>
+                    <td>@item.DonGia.ToString("#,##") đồng</td>
+                    <td>
+                        @Html.TextBox("SoLuong", item.SoLuong, new { @class="SoLuongThayDoi"})
+                        <p id="TB_SoLuongThayDoi"></p>
+                    </td>
+                    <td>@item.ThanhTien.ToString("#,##") đồng</td>
+                    <td>
+                        <input type="submit" value="Cập nhật" id="btnCapNhatGioHang" /> |
+                        @Html.ActionLink("Xoá", "XoaGioHang", new { @MaSP = item.MaSP })
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td>@item.MaSP</td>
+                <td>@item.TenSP</td>
+                <td><img src="@Url.Content("~/Content/HinhAnh/"+item.HinhAnh)" width="100" height="100" /></td>
+                <td>@item.DonGia.ToString("#,##") đồng</td>
+                <td>@item.SoLuong</td>
+                <td>@item.ThanhTien.ToString("#,##") đồng</td>
+                <td>
+                    @Html.ActionLink("Sửa", "SuaGioHang", new { @MaSP = item.MaSP }) |
+                    @Html.ActionLink("Xoá", "XoaGioHang", new { @MaSP = item.MaSP })
+                </td>
+            </tr>
+        }
+    }
+</table>
+
+<style>
+    .product-model-sec {
+        display: none;
+    }
+
+    td {
+        border: 2px solid pink;
+    }
+
+    .table {
+        margin-bottom: 100px;
+        border: 2px solid black;
+    }
+</style>
+
+@*Kiểm tra số lượng thay đổi*@
+<script>
+    $("#btnCapNhatGioHang").click(function () {
+        //kiểm tra số lượng không phải là số hoặc nhỏ hơn 0
+        var SoLuong = $(".SoLuongThayDoi").val();
+        if (isNaN(SoLuong) == true || SoLuong < 0) {
+            $("#TB_SoLuongThayDoi").text("Số lượng nhập vào không hợp lệ!");
+            return false;
+        }
+    })
+</script>

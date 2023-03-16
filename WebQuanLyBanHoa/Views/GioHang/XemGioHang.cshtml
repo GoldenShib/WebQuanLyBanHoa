@@ -1,0 +1,169 @@
+﻿@using WebQuanLyBanHoa.Models
+@model List<ItemGioHang>
+
+@{
+    ViewBag.Title = "XemGioHang";
+    Layout = "~/Views/Layout/ProductLayout.cshtml";
+}
+
+@if (Model == null || Model.Count == 0)
+{
+    <h2 style="font-family:'Segoe UI';">Giỏ hàng rỗng</h2>
+}
+else
+{
+    <table class="table">
+        <tr style="background-color:papayawhip;">
+            <td>Mã SP</td>
+            <td>Tên SP</td>
+            <td>Hình Ảnh</td>
+            <td>Đơn Giá</td>
+            <td>Số Lượng</td>
+            <td>Thành tiền</td>
+            <td>Tác vụ khác</td>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.MaSP</td>
+                <td>@item.TenSP</td>
+                <td><img src="@Url.Content("~/Content/HinhAnh/" + item.HinhAnh)" width="100" height="100" /></td>
+                <td>@item.DonGia.ToString("#,##") đồng</td>
+                <td>@item.SoLuong</td>
+                <td>@item.ThanhTien.ToString("#,##") đồng</td>
+                <td>
+                    @Html.ActionLink("Sửa", "SuaGioHang", new { @MaSP = item.MaSP }) |
+                    @Html.ActionLink("Xoá", "XoaGioHang", new { @MaSP = item.MaSP })
+                </td>
+            </tr>
+        }
+    </table>
+
+
+    using (Html.BeginForm("DatHang", "GioHang"))
+    {
+        if (Session["TaiKhoan"] == null)
+        {
+            @*Thiết kế form lưu thông tin khách hàng đối với khách vãng lai(khách chưa có tài khoản)*@
+            <div class="ThongTinKhachHang">
+                <table align="center" class="table">
+                    <tr>
+                        <td align="center" colspan="2" style="font-size:22px;background-color:papayawhip;"><b>Thông tin khách hàng</b></td>
+                    </tr>
+                    <tr>
+                        <td>Họ tên</td>
+                        <td>
+                            @Html.TextBox("TenKH")
+                            <p style="color:red;" id="TB_TenKH"></p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Địa chỉ</td>
+                        <td>
+                            @Html.TextBox("DiaChi")
+                            <p style="color:red;" id="TB_DiaChi"></p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            @Html.TextBox("Email")
+                            <p style="color:red;" id="TB_Email"></p>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Điện thoại</td>
+                        <td>
+                            @Html.TextBox("SoDienThoai")
+                            <p style="color:red;" id="TB_DienThoai"></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="divDatHang">
+                <input type="submit" value="Đặt hàng" class="btn btn-danger" id="btnDatHang" />
+                <button class="btn btn-success">@Html.ActionLink("Mua tiếp", "Index", "Home")</button>
+            </div>
+            @*Kiểm validation bằng jquery*@
+            <script>
+                $("#btnDatHang").click(function () {
+                    var loi = 0;
+
+                    if ($("#TenKH").val() == "") {
+                        $("#TB_TenKH").text("Tên khách hàng không được bỏ trống!");
+                        loi++;
+                    }
+                    else {
+                        $("#TB_TenKH").text("");
+                    }
+
+                    if ($("#DiaChi").val() == "") {
+                        $("#TB_DiaChi").text("Địa chỉ không được bỏ trống!");
+                        loi++;
+                    }
+                    else {
+                        $("#TB_DiaChi").text("");
+                    }
+
+                    if ($("#SoDienThoai").val() == "") {
+                        $("#TB_DienThoai").text("Số điện thoại không được bỏ trống!");
+                        loi++;
+                    }
+                    else {
+                        $("#TB_DienThoai").text("");
+                    }
+
+                    dinhdang = /^[0-9A-Za-z]+[0-9A-Za-z_]*@@[\w\d.]+\.\w{2,4}$/;
+                    KTemail = dinhdang.test($('#Email').val());
+                    if (!KTemail) {
+                        $('#TB_Email').text("Email không hợp lệ!");
+                        loi++;
+                    }
+                    if (loi != 0) {
+                        //Ngăn sự kiện submit đến server
+                        return false;
+                    }
+                });
+            </script>
+        }
+        else
+        {
+            <div class="divDatHang">
+                <input type="submit" value="Đặt hàng" class="btn btn-danger" id="btnDatHang" />
+                <a class="btn btn-danger" href="/GioHang/Payment">Thanh toán bằng Momo</a>
+                <button class="btn btn-success">@Html.ActionLink("Mua tiếp", "Index", "Home")</button>
+            </div>
+        }
+    }
+
+}
+
+<style>
+    .product-model-sec {
+        display: none;
+    }
+
+    td {
+        border: 2px solid pink;
+    }
+
+    h2 {
+        margin-bottom: 80px;
+    }
+
+    .table {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        border: 2px solid black;
+    }
+
+    .divDatHang {
+        text-align: right;
+        margin-bottom: 100px;
+    }
+</style>
+

@@ -1,0 +1,83 @@
+﻿@using WebQuanLyBanHoa.Models
+@model SanPham
+
+@{
+    ViewBag.Title = "NhapHangDon";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+}
+
+<legend>Nhập hàng cho sản phẩm <b style="color:red;">@Model.TenSP @Html.Hidden("MaSP",Model.MaSP)</b></legend>
+
+<div>
+    <h4>Thông tin sản phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonGia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongTon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/Content/HinhAnh/"+Model.HinhAnh)" />
+        </dd>
+
+    </dl>
+</div>
+<div class="clearfix"></div>
+<fieldset>
+    <legend>Thông tin nhập hàng</legend>
+</fieldset>
+<hr />
+@using (Html.BeginForm("NhapHangDon", "QuanLyPhieuNhap"))
+{
+    @Html.Hidden("MaSP",Model.MaSP)
+    <div class="row">
+        <div class="col-md-4">
+            @{ var lstNCC = (SelectList)ViewBag.MaNCC;}
+            Nhà cung cấp: @Html.DropDownList("MaNCC", lstNCC, new { @class = "MaNCC" })
+        </div>
+        <div class="col-md-4">
+            Số lượng nhập: @Html.TextBox("SoLuongNhap")
+        </div>
+        <div class="col-md-4">
+            Đơn giá nhập: @Html.TextBox("DonGiaNhap")
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+    <span style="color:red;font-size:24px;">@ViewBag.ThongBao</span>
+    <div class="clear right" style="text-align:right;margin-bottom:20px;">
+        <input type="submit" class="btn btn-primary" value="Nhập hàng" />
+    </div>
+    <div class="clearfix"></div>
+}
+
+<style>
+    dd, dl{
+        font-size:24px;
+    }
+</style>

@@ -1,0 +1,24 @@
+﻿@using WebQuanLyBanHoa.Models
+@model IEnumerable<SanPham>
+
+
+@foreach (var item in Model)
+{
+    <div class="col-md-3 feature-grid jewel">
+        <a href="@Url.RouteUrl("XemChiTiet", new { @id=item.MaSP, @tensp=item.TenSP})">
+            <img src="@Url.Content("~/Content/HinhAnh/"+item.HinhAnh)" alt="">
+            <div class="arrival-info">
+                <h4 style="font-family:'Segoe UI'">@item.TenSP</h4>
+                <p>@item.DonGia.Value.ToString("#,##") đồng</p>
+            </div>
+        </a><div class="viw">
+            <a href="@Url.Action("SanPham","SanPham", new { @id = item.MaSP})">
+            </a><a href="@Url.Action("XemChiTiet","SanPham", new { @id = item.MaSP})"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+        </div>
+        <div class="shrt">
+            <a href="@Url.Action("SanPham","SanPham", new { @moi = item.Moi})"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+        </div>
+    </div>
+}
+<div class="clearfix"></div>
+

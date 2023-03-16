@@ -1,0 +1,32 @@
+﻿@using WebQuanLyBanHoa.Models
+@model IEnumerable<SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layout/HomeLayout.cshtml";
+}
+@{
+    IEnumerable<SanPham> lstMoi = ViewBag.lsMoi as IEnumerable<SanPham>;
+    IEnumerable<SanPham> lstBanChay = ViewBag.lsBC as IEnumerable<SanPham>;
+}
+
+
+<div class="featured">
+    @*Danh Sách Sản phẩm mới*@
+    <div class="container">
+        <h3 style="font-family:'Segoe UI'">Sản phẩm mới nhất</h3>
+        <div class="feature-grids">
+            @Html.Partial("~/Views/SanPham/SanPhamStyle1Partial.cshtml", lstMoi)
+        </div>
+    </div>
+    @*Danh Sách sản phẩm bán chạy*@
+    <div class="container">
+        <h3 style="font-family:'Segoe UI'">Sản phẩm bán chạy nhất</h3>
+        <div class="feature-grids">
+            @Html.Partial("~/Views/SanPham/SanPhamStyle1Partial.cshtml", lstBanChay)
+        </div>
+    </div>
+</div>
+
+
+

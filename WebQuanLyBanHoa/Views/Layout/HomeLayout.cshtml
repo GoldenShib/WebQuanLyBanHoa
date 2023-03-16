@@ -1,0 +1,714 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hoa Tươi | CLMCA </title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <link href="~/Content/bootstrap-social.css" rel="stylesheet" />
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Content/js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="Wedding Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- start menu -->
+    <script src="~/Content/js/simpleCart.min.js"></script>
+    <!-- start menu -->
+    <link href="~/Content/css/memenu.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript" src="~/Content/js/memenu.js"></script>
+    <script>$(document).ready(function () { $(".memenu").memenu(); });</script>
+    <!-- /start menu -->
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+</head>
+
+<body>
+    <!--header-->
+    <div class="top_bg" style="background: radial-gradient(circle, rgba(239,126,217,1) 0%, rgba(142,124,207,1) 100%);">
+        @Html.Partial("~/Views/Layout/HeaderTopPartial.cshtml")
+        <!--<div class="container">
+            <div class="header_top-sec">-->
+        @*<div class="top_right">
+                <ul>
+                    <li><a href="#">help</a></li>|
+                    <li><a href="contact.html">Contact</a></li>|
+                    <li><a href="login.html">Track Order</a></li>
+                </ul>
+            </div>*@
+        <!--<div class="top_left">
+                    <ul>
+                        <li class="top_link">Email:<a href="mailto:nhk06052001@gmail.com">nhk06052001@gmail.com</a></li>|
+                        <li class="top_link"><a href="login.html">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>-->
+    </div>
+    <div class="header-top">
+        <div class="header-bottom">
+            <div class="container" style="padding-left:0;padding-right:0;">
+                <div class="logo">
+                    <a href="@Url.Action("Index","Home")"><h1>Flower Shop</h1></a>
+                </div>
+                <!---->
+                @Html.Action("MenuPartial", "Home")
+                @*<div class="top-nav">
+                        <ul class="memenu skyblue">
+                            <li class="showhide" style="overflow: hidden; display: none;"><span class="title">MENU</span><span class="icon1"></span><span class="icon2"></span></li>
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="grid">
+                                <a href="#">Wedding</a>
+                                <div class="mepanel">
+                                    <div class="row">
+                                        <div class="col1 me-one">
+                                            <h4>Shop</h4>
+                                            <ul>
+                                                <li><a href="product.html">New Arrivals</a></li>
+                                                <li><a href="product.html">Men</a></li>
+                                                <li><a href="product.html">Women</a></li>
+                                                <li><a href="product.html">Accessories</a></li>
+                                                <li><a href="product.html">Kids</a></li>
+                                                <li><a href="login.html">login</a></li>
+                                                <li><a href="product.html">Brands</a></li>
+                                                <li><a href="product.html">My Shopping Bag</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col1 me-one">
+                                            <h4>Style Zone</h4>
+                                            <ul>
+                                                <li><a href="product.html">Men</a></li>
+                                                <li><a href="product.html">Women</a></li>
+                                                <li><a href="product.html">Brands</a></li>
+                                                <li><a href="product.html">Kids</a></li>
+                                                <li><a href="product.html">Accessories</a></li>
+                                                <li><a href="product.html">Style Videos</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col1 me-one">
+                                            <h4>Popular Brands</h4>
+                                            <ul>
+                                                <li><a href="product.html">Levis</a></li>
+                                                <li><a href="product.html">Persol</a></li>
+                                                <li><a href="product.html">Nike</a></li>
+                                                <li><a href="product.html">Edwin</a></li>
+                                                <li><a href="product.html">New Balance</a></li>
+                                                <li><a href="product.html">Jack &amp; Jones</a></li>
+                                                <li><a href="product.html">Paul Smith</a></li>
+                                                <li><a href="product.html">Ray-Ban</a></li>
+                                                <li><a href="product.html">Wood Wood</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="grid">
+                                <a href="#">Bride Style</a>
+                                <div class="mepanel">
+                                    <div class="row">
+                                        <div class="col1 me-one">
+                                            <h4>Shop</h4>
+                                            <ul>
+                                                <li><a href="product.html">New Arrivals</a></li>
+                                                <li><a href="product.html">Men</a></li>
+                                                <li><a href="product.html">Women</a></li>
+                                                <li><a href="product.html">Accessories</a></li>
+                                                <li><a href="product.html">Kids</a></li>
+                                                <li><a href="login.html">login</a></li>
+                                                <li><a href="product.html">Brands</a></li>
+                                                <li><a href="product.html">My Shopping Bag</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col1 me-one">
+                                            <h4>Style Zone</h4>
+                                            <ul>
+                                                <li><a href="product.html">Men</a></li>
+                                                <li><a href="product.html">Women</a></li>
+                                                <li><a href="product.html">Brands</a></li>
+                                                <li><a href="product.html">Kids</a></li>
+                                                <li><a href="product.html">Accessories</a></li>
+                                                <li><a href="product.html">Style Videos</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col1 me-one">
+                                            <h4>Popular Brands</h4>
+                                            <ul>
+                                                <li><a href="product.html">Levis</a></li>
+                                                <li><a href="product.html">Persol</a></li>
+                                                <li><a href="product.html">Nike</a></li>
+                                                <li><a href="product.html">Edwin</a></li>
+                                                <li><a href="product.html">New Balance</a></li>
+                                                <li><a href="product.html">Jack &amp; Jones</a></li>
+                                                <li><a href="product.html">Paul Smith</a></li>
+                                                <li><a href="product.html">Ray-Ban</a></li>
+                                                <li><a href="product.html">Wood Wood</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="grid"><a href="typo.html">Typo</a></li>
+                            <li class="grid"><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="clearfix"> </div>
+                    </div>*@
+                <!---->
+                @*chèn 1 partial view giỏ hàng(Tách icon giỏ hàng sang 1 partial view mới)*@
+                @Html.Action("GioHangPartial","GioHang")
+                <div class="clearfix"> </div>
+                <!---->
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!---->
+    <div class="banner">
+        <div class="container">
+
+        </div>
+    </div>
+
+    <div class="welcome">
+        <div class="container">
+            <div class="col-md-3 welcome-left">
+                <h2>Welcome to my shop</h2>
+            </div>
+            <div class="col-md-9 welcome-right">
+                <h3 style="font-family:'Segoe UI'">Nơi tình yêu bắt đầu!!!</h3>
+                <p style="font-size:18px;">
+                    Tiệm hoa Quang Tân  cam kết đặt chất lượng hoa luôn tươi mới lên hàng đầu giao cho khách.
+                    Các mẫu hoa luôn được cắm đủ số lượng và giống kiểu dáng trên website nhất có thể.
+                    Không gì tuyệt vời hơn buổi tối cuối ngày cùng một đoá hoa đẹp bên cạnh nến và rượu vang.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="bride-grids">
+        <div class="container">
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Content/images/bongHoa.png" alt="">
+                        <figcaption style="padding:18px;">
+                            <h4>Kết nối yêu thương</h4>
+                            <p style="color:floralwhite;font-size:16px;">
+                                Hoa dù có khoe sắc cỡ nào cũng lụi tàn khi gặp mưa. Em dù có mạnh mẽ, kiên cường nhưng vẫn cần bờ vai của anh.
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3 style="font-family:'Segoe UI';">Nhẹ nhàng</h3>
+                </div>
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Content/images/birthday.png" alt="">
+                        <figcaption style="padding:18px;">
+                            <h4>Trao gửi nụ cười</h4>
+                            <p style="color: floralwhite; font-size: 16px;">
+                                Vẻ đẹp thanh tao, tão nhã của đóa hoa mà năm tháng tỉa dần từng cánh , gợi cho anh về những nốt trầm trong tâm trạng và sự lặng yên trong cuộc đời của em.
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3 style="font-family:'Segoe UI';">Thanh tao</h3>
+                </div>
+            </div>
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <img src="~/Content/images/forHer.png" alt="">
+                    <h3 style="font-family:'Segoe UI';">Huyền bí</h3>
+                </div>
+            </div>
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Content/images/wed_ding.png" alt="">
+                        <figcaption style="padding:18px;">
+                            <h4>Hạnh phúc bé nhỏ</h4>
+                            <p style="color: floralwhite; font-size: 16px;">
+                                Một bông hoa quyến rũ nhất khi đơn độc, em đẹp và quyến rũ nhất là khi không thuộc về bất cứ ai.
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3 style="font-family:'Segoe UI';">Quyến rũ</h3>
+                </div>
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Content/images/b&e.png" alt="">
+                        <figcaption style="padding:18px;">
+                            <h4>Biển rộng tình sâu</h4>
+                            <p style="color: floralwhite; font-size: 16px;">
+                                Khi màn đêm buông xuống, hương hoa càng trở nên nồng nàn, ngất ngây hơn, tựa như mùi hương em làm dấy lên bao rung động.
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3 style="font-family:'Segoe UI';">Ngất ngây</h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    @RenderBody()
+    <!--<div class="bride-grids">
+        <div class="container">
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Content/images/1.jpg" alt="">
+                        <figcaption>
+                            <h4>Nullam molestie </h4>
+                            <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3>Wedding Dresses</h3>
+                </div>
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Content/images/b2.jpg" alt="">
+                        <figcaption>
+                            <h4>Nullam molestie </h4>
+                            <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3>BridalParty &amp; Dresses</h3>
+                </div>
+            </div>
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <img src="~/Content/images/HoaSen2.png" alt="">
+        @*<h3>Quốc hoa Việt Nam</h3>*@
+        <!--</div>
+            </div>
+            <div class="col-md-4 bride-grid">
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Content/images/b3.jpg" alt="">
+                        <figcaption>
+                            <h4>Nullam molestie </h4>
+                            <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3>Wedding</h3>
+                </div>
+                <div class="content-grid l-grids">
+                    <figure class="effect-bubba">
+                        <img src="~/Content/images/b4.jpg" alt="">
+                        <figcaption>
+                            <h4>Nullam molestie </h4>
+                            <p>In sit amet sapien eros Integer in tincidunt labore et dolore magna aliqua</p>
+                        </figcaption>
+                    </figure>
+                    <div class="clearfix"></div>
+                    <h3>Most Beautiful</h3>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>-->
+    <!---->
+    <!--<div class="featured">
+        <div class="container">
+            <h3>Featured Products</h3>
+            <div class="feature-grids">
+                <div class="col-md-3 feature-grid jewel">
+                    <a href="product.html">
+                        <img src="~/Content/images/f1.jpg" alt="">
+                        <div class="arrival-info">
+                            <h4>Jewellerys #1</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>Rs 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                    </a><div class="viw">
+                        <a href="product.html">
+                        </a><a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                    </div>
+                    <div class="shrt">
+                        <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                    </div>
+                </div>
+                <div class="col-md-3 feature-grid">
+                    <a href="product.html">
+                        <img src="~/Content/images/f2.jpg" alt="">
+                        <div class="arrival-info">
+                            <h4>Jewellerys #1</h4>
+                            <p>Rs 68000</p>
+                            <span class="pric1"><del>Rs 70000</del></span>
+                            <span class="disc">[10% Off]</span>
+                        </div>
+                    </a><div class="viw">
+                        <a href="product.html">
+                        </a><a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                    </div>
+                    <div class="shrt">
+                        <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                    </div>
+                </div>
+                <div class="col-md-3 feature-grid jewel">
+                    <a href="product.html">
+                        <img src="~/Content/images/f3.jpg" alt="">
+                        <div class="arrival-info">
+                            <h4>Wedding Ceramic Pot </h4>
+                            <p>Rs 1200</p>
+                            <span class="pric1"><del>Rs 2000</del></span>
+                            <span class="disc">[10% Off]</span>
+                        </div>
+                    </a><div class="viw">
+                        <a href="product.html">
+                        </a><a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                    </div>
+                    <div class="shrt">
+                        <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                    </div>
+                </div>
+                <div class="col-md-3 feature-grid">
+                    <a href="product.html">
+                        <img src="~/Content/images/f4.jpg" alt="">
+                        <div class="arrival-info">
+                            <h4>Jewellerys #1</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>Rs 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                    </a><div class="viw">
+                        <a href="product.html">
+                        </a><a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                    </div>
+                    <div class="shrt">
+                        <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="feature-grids">
+                <div class="col-md-3 feature-grid jewel">
+                    <a href="product.html">
+                        <img src="~/Content/images/p7.jpg" alt="">
+                        <div class="arrival-info">
+                            <h4>Jewellerys #1</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>Rs 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                    </a><div class="viw">
+                        <a href="product.html">
+                        </a><a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                    </div>
+                    <div class="shrt">
+                        <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                    </div>
+                </div>
+                <div class="col-md-3 feature-grid">
+                    <a href="product.html">
+                        <img src="~/Content/images/p11.jpg" alt="">
+                        <div class="arrival-info">
+                            <h4>Jewellerys #1</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>Rs 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                    </a><div class="viw">
+                        <a href="product.html">
+                        </a><a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                    </div>
+                    <div class="shrt">
+                        <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                    </div>
+                </div>
+                <div class="col-md-3 feature-grid jewel">
+                    <a href="product.html">
+                        <img src="~/Content/images/p12.jpg" alt="">
+                        <div class="arrival-info">
+                            <h4>Jewellerys #1</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>Rs 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                    </a><div class="viw">
+                        <a href="product.html">
+                        </a><a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                    </div>
+                    <div class="shrt">
+                        <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                    </div>
+                </div>
+                <div class="col-md-3 feature-grid">
+                    <a href="product.html">
+                        <img src="~/Content/images/f2.jpg" alt="">
+                        <div class="arrival-info">
+                            <h4>Jewellerys #1</h4>
+                            <p>Rs 12000</p>
+                            <span class="pric1"><del>Rs 18000</del></span>
+                            <span class="disc">[12% Off]</span>
+                        </div>
+                    </a><div class="viw">
+                        <a href="product.html">
+                        </a><a href="product.html"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                    </div>
+                    <div class="shrt">
+                        <a href="product.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>-->
+    <!---->
+    <!--<div class="arrivals">
+        <div class="container">
+            <h3>New Arrivals</h3>
+            <div class="arrival-grids">
+                <div class="nbs-flexisel-container">
+                    <div class="nbs-flexisel-inner">
+                        <ul id="flexiselDemo1" class="nbs-flexisel-ul" style="left: -285px; display: block;">
+
+
+
+
+                            <li class="nbs-flexisel-item" style="width: 285px;">
+                                <a href="product.html">
+                                    <img src="~/Content/images/a4.jpg" alt="">
+                                    <div class="arrival-info">
+                                        <h4>La Fanatise White Net Gowns</h4>
+                                        <p>Rs 18000</p>
+                                        <span class="pric1"><del>Rs 21000</del></span>
+                                        <span class="disc">[8% Off]</span>
+                                    </div>
+                                </a><div class="viw">
+                                    <a href="product.html">
+                                    </a><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                                </div>
+                                <div class="shrt">
+                                    <a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                                </div>
+                            </li>
+                            <li class="nbs-flexisel-item" style="width: 285px;">
+                                <a href="product.html">
+                                    <img src="~/Content/images/a1.jpg" alt="">
+                                    <div class="arrival-info">
+                                        <h4>Fusion Black Polyester Suits</h4>
+                                        <p>Rs 12000</p>
+                                        <span class="pric1"><del>Rs 18000</del></span>
+                                        <span class="disc">[12% Off]</span>
+                                    </div>
+                                </a><div class="viw">
+                                    <a href="product.html">
+                                    </a><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                                </div>
+                                <div class="shrt">
+                                    <a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                                </div>
+                            </li>
+                            <li class="nbs-flexisel-item" style="width: 285px;">
+                                <a href="product.html">
+                                    <img src="~/Content/images/a2.jpg" alt="">
+                                    <div class="arrival-info">
+                                        <h4>Vogue4All White Net Gowns</h4>
+                                        <p>Rs 14000</p>
+                                        <span class="pric1"><del>Rs 15000</del></span>
+                                        <span class="disc">[10% Off]</span>
+                                    </div>
+                                </a><div class="viw">
+                                    <a href="product.html">
+                                    </a><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                                </div>
+                                <div class="shrt">
+                                    <a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                                </div>
+                            </li>
+                            <li class="nbs-flexisel-item" style="width: 285px;">
+                                <a href="product.html">
+                                    <img src="~/Content/images/a3.jpg" alt="">
+                                    <div class="arrival-info">
+                                        <h4>Platinum Waist Coat Set Navy</h4>
+                                        <p>Rs 4000</p>
+                                        <span class="pric1"><del>Rs 8500</del></span>
+                                        <span class="disc">[45% Off]</span>
+                                    </div>
+                                </a><div class="viw">
+                                    <a href="product.html">
+                                    </a><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                                </div>
+                                <div class="shrt">
+                                    <a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                                </div>
+                            </li>
+                            <li class="nbs-flexisel-item" style="width: 285px;">
+                                <a href="product.html">
+                                    <img src="~/Content/images/a4.jpg" alt="">
+                                    <div class="arrival-info">
+                                        <h4>La Fanatise White Net Gowns</h4>
+                                        <p>Rs 18000</p>
+                                        <span class="pric1"><del>Rs 21000</del></span>
+                                        <span class="disc">[8% Off]</span>
+                                    </div>
+                                </a><div class="viw">
+                                    <a href="product.html">
+                                    </a><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                                </div>
+                                <div class="shrt">
+                                    <a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                                </div>
+                            </li>
+                            <li class="nbs-flexisel-item" style="width: 285px;">
+                                <a href="product.html">
+                                    <img src="~/Content/images/a1.jpg" alt="">
+                                    <div class="arrival-info">
+                                        <h4>Fusion Black Polyester Suits</h4>
+                                        <p>Rs 12000</p>
+                                        <span class="pric1"><del>Rs 18000</del></span>
+                                        <span class="disc">[12% Off]</span>
+                                    </div>
+                                </a><div class="viw">
+                                    <a href="product.html">
+                                    </a><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                                </div>
+                                <div class="shrt">
+                                    <a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                                </div>
+                            </li>
+                            <li class="nbs-flexisel-item" style="width: 285px;">
+                                <a href="product.html">
+                                    <img src="~/Content/images/a2.jpg" alt="">
+                                    <div class="arrival-info">
+                                        <h4>Vogue4All White Net Gowns</h4>
+                                        <p>Rs 14000</p>
+                                        <span class="pric1"><del>Rs 15000</del></span>
+                                        <span class="disc">[10% Off]</span>
+                                    </div>
+                                </a><div class="viw">
+                                    <a href="product.html">
+                                    </a><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                                </div>
+                                <div class="shrt">
+                                    <a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                                </div>
+                            </li>
+                            <li class="nbs-flexisel-item" style="width: 285px;">
+                                <a href="product.html">
+                                    <img src="~/Content/images/a3.jpg" alt="">
+                                    <div class="arrival-info">
+                                        <h4>Platinum Waist Coat Set Navy</h4>
+                                        <p>Rs 4000</p>
+                                        <span class="pric1"><del>Rs 8500</del></span>
+                                        <span class="disc">[45% Off]</span>
+                                    </div>
+                                </a><div class="viw">
+                                    <a href="product.html">
+                                    </a><a href="#"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>Quick View</a>
+                                </div>
+                                <div class="shrt">
+                                    <a href="#"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Shortlist</a>
+                                </div>
+                            </li>
+                        </ul><div class="nbs-flexisel-nav-left" style="top: 168.5px;"></div><div class="nbs-flexisel-nav-right" style="top: 168.5px;"></div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    $(window).load(function () {
+                        $("#flexiselDemo1").flexisel({
+                            visibleItems: 4,
+                            animationSpeed: 1000,
+                            autoPlay: true,
+                            autoPlaySpeed: 3000,
+                            pauseOnHover: true,
+                            enableResponsiveBreakpoints: true,
+                            responsiveBreakpoints: {
+                                portrait: {
+                                    changePoint: 480,
+                                    visibleItems: 1
+                                },
+                                landscape: {
+                                    changePoint: 640,
+                                    visibleItems: 2
+                                },
+                                tablet: {
+                                    changePoint: 768,
+                                    visibleItems: 3
+                                }
+                            }
+                        });
+                    });
+                </script>
+                <script type="text/javascript" src="js/jquery.flexisel.js"></script>
+            </div>
+        </div>
+    </div>-->
+    <!---->
+    <div class="shoping">
+        <div class="container">
+            <div class="shpng-grids">
+                <div class="col-md-4 shpng-grid">
+                    <h3 style="font-family:'Segoe UI'">Free Shipping</h3>
+                    <p style="font-family:'Segoe UI'">Với đơn trên 350.000 đồng</p>
+                </div>
+                <div class="col-md-4 shpng-grid">
+                    <h3 style="font-family:'Segoe UI'">Đổi trả sản phẩm lỗi</h3>
+                    <p style="font-family:'Segoe UI'">Trong vòng 1h sau khi nhận hàng</p>
+                </div>
+                <div class="col-md-4 shpng-grid">
+                    <h3 style="font-family:'Segoe UI'">COD</h3>
+                    <p style="font-family:'Segoe UI'">Thanh toán khi nhận hàng</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="footer">
+        <div class="container">
+            <div class="ftr-grids">
+                <div class="col-md-4 ftr-grid">
+                    <h4>Về Chúng Tôi</h4>
+                    <p>
+                        Hoa tươi Quang Tân  chuyên tư vấn thiết kế và trang trí hoa tươi trong tất cả các lĩnh vực: hoa chúc mừng, hoa sinh nhật, hoa khai trương, hoa văn phòng, hoa sự kiện, hoa cưới, xe hoa, cổng hoa, hoa trang trí, đặc biệt là dịch vụ điện hoa toàn quốc…với nhiều mẫu hoa mới lạ, giá cả hợp lý.
+                    </p>
+                </div>
+                <div class="col-md-4 ftr-grid">
+                    <h4>Dịch vụ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Giao hàng</a></li>
+                        <li><a href="#">Huỷ đơn hàng</a></li>
+                        <li><a href="#">Đổi trả</a></li>
+                        <li><a href="#">Hướng dẫn</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 ftr-grid">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Youtube</a></li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="copywrite">
+        <div class="container">
+            <p>Copyright © 2015 Wedding Store. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+        </div>
+    </div>
+
+
+</body>
+</html>
+<style>
+    figure.effect-bubba {
+        background-color: rgba(239,126,217,1);
+    }
+</style>

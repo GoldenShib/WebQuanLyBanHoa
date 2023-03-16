@@ -1,0 +1,345 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Admin, Dashboard, Bootstrap" />
+    <link rel="shortcut icon" sizes="196x196" href="~/Content/AdminLayout2/assets/images/logo.png">
+    <title>Admin Flower Shop</title>
+
+    <link rel="stylesheet" href="~/Content/AdminLayout2/libs/bower/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/AdminLayout2/libs/bower/material-design-iconic-font/dist/css/material-design-iconic-font.css">
+    <!-- build:css ../assets/css/app.min.css -->
+    <link rel="stylesheet" href="~/Content/AdminLayout2/libs/bower/animate.css/animate.min.css">
+    <link rel="stylesheet" href="~/Content/AdminLayout2/libs/bower/fullcalendar/dist/fullcalendar.min.css">
+    <link rel="stylesheet" href="~/Content/AdminLayout2/libs/bower/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="~/Content/AdminLayout2/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/AdminLayout2/assets/css/core.css">
+    <link rel="stylesheet" href="~/Content/AdminLayout2/assets/css/app.css">
+    <!-- endbuild -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900,300">
+    <script src="~/Content/AdminLayout2/libs/bower/breakpoints.js/dist/breakpoints.min.js"></script>
+    <script>
+        Breakpoints();
+    </script>
+    <link rel="stylesheet" href="~/Content/AdminLayout2/libs/bower/switchery/dist/switchery.min.css">
+
+</head>
+
+<body class="menubar-left menubar-unfold menubar-light theme-primary">
+    <!--============= start main area -->
+    <!-- APP NAVBAR ==========-->
+    <nav id="app-navbar" class="navbar navbar-inverse navbar-fixed-top primary">
+
+        <!-- navbar header -->
+        <div class="navbar-header">
+            <button type="button" id="menubar-toggle-btn" class="navbar-toggle visible-xs-inline-block navbar-toggle-left hamburger hamburger--collapse js-hamburger">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+            </button>
+
+            <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="zmdi zmdi-hc-lg zmdi-more"></span>
+            </button>
+
+            <button type="button" class="navbar-toggle navbar-toggle-right collapsed" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="zmdi zmdi-hc-lg zmdi-search"></span>
+            </button>
+
+            <a href="#" class="navbar-brand">
+                <span class="brand-icon"><i class="fa fa-gg"></i></span>
+                <span class="brand-name">Infinity</span>
+            </a>
+        </div><!-- .navbar-header -->
+
+        <div class="navbar-container container-fluid">
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <ul class="nav navbar-toolbar navbar-toolbar-left navbar-left">
+                    <li class="hidden-float hidden-menubar-top">
+                        <a href="javascript:void(0)" role="button" id="menubar-fold-btn" class="hamburger hamburger--arrowalt is-active js-hamburger">
+                            <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <h5 class="page-title hidden-menubar-top hidden-float">Dashboard</h5>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-toolbar navbar-toolbar-right navbar-right">
+                    <li class="nav-item dropdown hidden-float">
+                        <a href="javascript:void(0)" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+                            <i class="zmdi zmdi-hc-lg zmdi-search"></i>
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-notifications"></i></a>
+                        <div class="media-group dropdown-menu animated flipInY">
+
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="zmdi zmdi-hc-lg zmdi-settings"></i></a>
+                        
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="side-panel-toggle" data-toggle="class" data-target="#side-panel" data-class="open" role="button"><i class="zmdi zmdi-hc-lg zmdi-apps"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- navbar-container -->
+    </nav>
+    <!--========== END app navbar -->
+    <!-- APP ASIDE ==========-->
+    <aside id="menubar" class="menubar light">
+
+        <div class="menubar-scroll">
+            <div class="menubar-scroll-inner">
+                <ul class="app-menu">
+                    @*<li class="has-submenu">
+                        <a href="javascript:void(0)" class="submenu-toggle">
+                            <i class="menu-icon zmdi zmdi-view-dashboard zmdi-hc-lg"></i>
+                            <span class="menu-text">Dashboards</span>
+                            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="index.html"><span class="menu-text">Dashboard 1</span></a></li>
+                            <li><a href="dashboard.2.html"><span class="menu-text">Dashboard 2</span></a></li>
+                            <li><a href="dashboard.3.html"><span class="menu-text">Dashboard 3</span></a></li>
+                        </ul>
+                    </li>*@
+
+                    @*<li class="has-submenu">
+                        <a href="javascript:void(0)" class="submenu-toggle">
+                            <i class="menu-icon zmdi zmdi-layers zmdi-hc-lg"></i>
+                            <span class="menu-text">Layouts</span>
+                            <span class="label label-warning menu-label">2</span>
+                            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="~/Content/AdminLayout2/default/index.html"><span class="menu-text">Default</span></a></li>
+                            <li><a href="~/Content/AdminLayout2/topbar/index.html"><span class="menu-text">Topbar</span></a></li>
+                        </ul>
+                    </li>*@
+
+                    @*<li class="has-submenu">
+                        <a href="javascript:void(0)" class="submenu-toggle">
+                            <i class="menu-icon zmdi zmdi-puzzle-piece zmdi-hc-lg"></i>
+                            <span class="menu-text">UI Kit</span>
+                            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="buttons.html"><span class="menu-text">Buttons</span></a></li>
+                            <li><a href="alerts.html"><span class="menu-text">Alerts</span></a></li>
+                            <li><a href="panels.html"><span class="menu-text">Panels</span></a></li>
+                            <li><a href="lists.html"><span class="menu-text">Lists</span></a></li>
+                            <li><a href="icons.html"><span class="menu-text">Icons</span></a></li>
+                            <li><a href="media.html"><span class="menu-text">Media</span></a></li>
+                            <li><a href="widgets.html"><span class="menu-text">Widgets</span></a></li>
+                            <li><a href="tabs.html"><span class="menu-text">Tabs &amp; Accordions</span></a></li>
+                            <li><a href="progress.html"><span class="menu-text">Progress</span></a></li>
+                        </ul>
+                    </li>*@
+
+                    @*<li class="has-submenu">
+                        <a href="javascript:void(0)" class="submenu-toggle">
+                            <i class="menu-icon zmdi zmdi-inbox zmdi-hc-lg"></i>
+                            <span class="menu-text">Mail Box</span>
+                            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="inbox.html">
+                                    <span class="menu-text">Inbox</span>
+                                    <span class="label label-primary menu-label">12</span>
+                                </a>
+                            </li>
+                            <li><a href="compose.html"><span class="menu-text">Compose</span></a></li>
+                        </ul>
+                    </li>*@
+
+                    @*<li>
+                        <a href="#">
+                            <i class="menu-icon zmdi zmdi-search zmdi-hc-lg"></i>
+                            <span class="menu-text">Search</span>
+                        </a>
+                    </li>*@
+
+                    <li class="has-submenu">
+                        <a href="javascript:void(0)" class="submenu-toggle">
+                            <i class="menu-icon zmdi zmdi-pages zmdi-hc-lg"></i>
+                            <span class="menu-text">Pages</span>
+                            <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="@Url.Action("Index","Admin")"><span class="menu-text">Trang chủ Admin</span></a></li>
+                            <li><a href="@Url.Action("Index","QuanLySanPham")"><span class="menu-text">Quản lý sản phẩm</span></a></li>
+                            <li><a href="@Url.Action("NhapHang","QuanLyPhieuNhap")"><span class="menu-text">Nhập hàng</span></a></li>
+                            <li><a href="@Url.Action("DSSPHetHang","QuanLyPhieuNhap")"><span class="menu-text">DS sản phẩm sắp hết hàng</span></a></li>
+                            <li><a href="@Url.Action("ChuaThanhToan","QuanLyDonHang")"><span class="menu-text">Duyệt đơn hàng</span></a></li>
+                            <li><a href="@Url.Action("Index","PhanQuyen")"><span class="menu-text">Phân quyền</span></a></li>
+
+                            @*<li class="has-submenu">
+            <a href="javascript:void(0)" class="submenu-toggle">
+                <i class="menu-icon zmdi zmdi-plus zmdi-hc-lg"></i>
+                <span class="menu-text">Misc Pages</span>
+                <i class="menu-caret zmdi zmdi-hc-sm zmdi-chevron-right"></i>
+            </a>
+            <ul class="submenu">
+                <li><a href="login.html"><span class="menu-text">Login</span></a></li>
+                <li><a href="signup.html"><span class="menu-text">Sign Up</span></a></li>
+                <li><a href="password-forget.html"><span class="menu-text">Reset Password</span></a></li>
+                <li><a href="unlock.html"><span class="menu-text">Unlock Screen</span></a></li>
+                <li><a href="404.html"><span class="menu-text">404 Error</span></a></li>
+            </ul>
+        </li>*@
+                        </ul>
+                    </li>
+
+                    <li class="menu-separator"><hr></li>
+
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon zmdi zmdi-file-text zmdi-hc-lg"></i>
+                            <span class="menu-text">Documentation</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon zmdi zmdi-settings zmdi-hc-lg"></i>
+                            <span class="menu-text">Settings</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0)">
+                            <i class="menu-icon zmdi zmdi-language-javascript zmdi-hc-lg"></i>
+                            <span class="menu-text">Angular Version</span>
+                        </a>
+                    </li>
+                </ul><!-- .app-menu -->
+            </div><!-- .menubar-scroll-inner -->
+        </div><!-- .menubar-scroll -->
+    </aside>
+    <!--========== END app aside -->
+    <!-- navbar search -->
+    <div id="navbar-search" class="navbar-search collapse">
+        <div class="navbar-search-inner">
+            <form action="#">
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+                <input class="search-field" type="search" placeholder="search..." />
+            </form>
+            <button type="button" class="search-close" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false">
+                <i class="fa fa-close"></i>
+            </button>
+        </div>
+        <div class="navbar-search-backdrop" data-toggle="collapse" data-target="#navbar-search" aria-expanded="false"></div>
+    </div><!-- .navbar-search -->
+    <!-- APP MAIN ==========-->
+    <main id="app-main" class="app-main">
+        <div class="wrap">
+            @RenderBody()
+            <!-- #dash-content -->
+        </div><!-- .wrap -->
+        <!-- APP FOOTER -->
+        <div class="wrap p-t-0">
+            <footer class="app-footer">
+                <div class="clearfix">
+                    <ul class="footer-menu pull-right">
+                        <li><a href="javascript:void(0)">Careers</a></li>
+                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)">Feedback <i class="fa fa-angle-up m-l-md"></i></a></li>
+                    </ul>
+                    <div class="copyright pull-left">Copyright RaThemes 2016 &copy;</div>
+                </div>
+            </footer>
+        </div>
+        <!-- /#app-footer -->
+    </main>
+    <!--========== END app main -->
+    <!-- APP CUSTOMIZER -->
+    <div id="app-customizer" class="app-customizer">
+        <a href="javascript:void(0)"
+           class="app-customizer-toggle theme-color"
+           data-toggle="class"
+           data-class="open"
+           data-active="false"
+           data-target="#app-customizer">
+            <i class="fa fa-gear"></i>
+        </a>
+        <div class="customizer-tabs">
+            <!-- tabs list -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#menubar-customizer" aria-controls="menubar-customizer" role="tab" data-toggle="tab">Menubar</a></li>
+                <li role="presentation"><a href="#navbar-customizer" aria-controls="navbar-customizer" role="tab" data-toggle="tab">Navbar</a></li>
+            </ul><!-- .nav-tabs -->
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane in active fade" id="menubar-customizer">
+                    <div class="hidden-menubar-top hidden-float">
+                        <div class="m-b-0">
+                            <label for="menubar-fold-switch">Fold Menubar</label>
+                            <div class="pull-right">
+                                <input id="menubar-fold-switch" type="checkbox" data-switchery data-size="small" />
+                            </div>
+                        </div>
+                        <hr class="m-h-md">
+                    </div>
+                    <div class="radio radio-default m-b-md">
+                        <input type="radio" id="menubar-light-theme" name="menubar-theme" data-toggle="menubar-theme" data-theme="light">
+                        <label for="menubar-light-theme">Light</label>
+                    </div>
+
+                    <div class="radio radio-inverse m-b-md">
+                        <input type="radio" id="menubar-dark-theme" name="menubar-theme" data-toggle="menubar-theme" data-theme="dark">
+                        <label for="menubar-dark-theme">Dark</label>
+                    </div>
+                </div><!-- .tab-pane -->
+                <div role="tabpanel" class="tab-pane fade" id="navbar-customizer">
+                    <!-- This Section is populated Automatically By javascript -->
+                </div><!-- .tab-pane -->
+            </div>
+        </div><!-- .customizer-taps -->
+        <hr class="m-0">
+        <div class="customizer-reset">
+            <button id="customizer-reset-btn" class="btn btn-block btn-outline btn-primary">Reset</button>
+            <a href="https://themeforest.net/item/infinity-responsive-web-app-kit/16230780" class="m-t-sm btn btn-block btn-danger">Buy Now</a>
+        </div>
+    </div><!-- #app-customizer -->
+    <!-- SIDE PANEL -->
+    <div id="side-panel" class="side-panel">
+        <div class="panel-header">
+
+        </div>
+        <div class="scrollable-container">
+            <div class="media-group">
+            </div>
+        </div><!-- .scrollable-container -->
+    </div><!-- /#side-panel -->
+    <!-- build:js ../assets/js/core.min.js -->
+    <script src="~/Content/AdminLayout2/libs/bower/jquery/dist/jquery.js"></script>
+    <script src="~/Content/AdminLayout2/libs/bower/jquery-ui/jquery-ui.min.js"></script>
+    <script src="~/Content/AdminLayout2/libs/bower/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+    <script src="~/Content/AdminLayout2/libs/bower/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+    <script src="~/Content/AdminLayout2/libs/bower/jquery-slimscroll/jquery.slimscroll.js"></script>
+    <script src="~/Content/AdminLayout2/libs/bower/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+    <script src="~/Content/AdminLayout2/libs/bower/PACE/pace.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js ../assets/js/app.min.js -->
+    <script src="~/Content/AdminLayout2/assets/js/library.js"></script>
+    <script src="~/Content/AdminLayout2/assets/js/plugins.js"></script>
+    <script src="~/Content/AdminLayout2/assets/js/app.js"></script>
+    <!-- endbuild -->
+    <script src="~/Content/AdminLayout2/libs/bower/moment/moment.js"></script>
+    <script src="~/Content/AdminLayout2/libs/bower/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="~/Content/AdminLayout2/assets/js/fullcalendar.js"></script>
+    <script src="~/Content/AdminLayout2/libs/bower/switchery/dist/switchery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿@model WebQuanLyBanHoa.Models.DonDatHang
+@using WebQuanLyBanHoa.Models
+
+@{
+
+    ViewBag.Title = "DuyetDonHang";
+    Layout = "~/Views/Layout/AdminLayout.cshtml";
+    WebGrid grid = new WebGrid(rowsPerPage: 20);
+}
+
+<h2>Thông tin đơn hàng của: <font color="red">@Model.KhachHang.TenKH</font></h2>
+
+@using (Html.BeginForm())
+{
+    <div class="ChiTietDonHang table">
+        @{ var lstChiTietDH = ViewBag.ListChiTietDH; }
+        <table class="table" id="table">
+            @*Phần thông tin đơn hàng*@
+            <tr>
+                <td colspan="4">
+                    <table style="width:100%;">
+                        <tr>
+                            <td>Mã đơn hàng: <b style="color:red;">@Model.MaDDH @Html.Hidden("MaDDH", Model.MaDDH)</b></td>
+                            <td>Mã khách hàng: <b style="color:red;">@Model.KhachHang.MaKH</b></td>
+                            <td>Tên khách hàng: <b style="color:red;">@Model.KhachHang.TenKH</b></td>
+                            <td>Ngày đặt: @Model.NgayDat.Value.ToString("dd/MM/yyyy")</td>
+                            <td>Đã thanh toán: @Html.EditorFor(model => model.DaThanhToan)</td>
+                            <td>Tình trạng đơn hàng: @Html.EditorFor(model => model.TinhTrangDonHang)</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            @*Phần thông tin chi tiết đơn hàng*@
+            <tr>
+                <td>Sản phẩm</td>
+                <td>Hình ảnh</td>
+                <td>Số lượng đặt</td>
+                <td>Đơn giá đặt</td>
+            </tr>
+            @foreach (var item in lstChiTietDH)
+            {
+                <tr>
+                    <td>@item.SanPham.TenSP</td>
+                    <td><img width="150" height="50" src="@Url.Content("~/Content/HinhAnh/"+item.SanPham.HinhAnh)" /></td>
+                    <td>@item.SoLuong</td>
+                    <td>@item.DonGia</td>
+                </tr>
+            }
+            @{
+                int sl = 0;
+                decimal tong = 0;
+                foreach (var cthd in lstChiTietDH)
+                {
+                    sl = sl + cthd.SoLuong;
+                    tong = tong + cthd.SoLuong * cthd.DonGia;
+                }
+
+            }
+            <tr>
+                <td colspan="4" align="right">Tổng số lượng: @sl sản phẩm</td>
+            </tr>
+            <tr>
+                <td colspan="4" align="right">Tổng tiền: @tong.ToString("#,##") đồng</td>
+            </tr>
+        </table>
+        <input type="button" id="btnInDonHang" value="In đơn hàng" />
+        <input type="submit" id="btnLuuDonHang" value="Lưu đơn hàng" />
+    </div>
+}
+
+<script>
+    $("#btnInDonHang").click(function InDonHang() {
+        var content = "<table>" + $("#table").html() + "</table>";
+        InDonHang(content);
+    });
+
+    function InDonHang(content) {
+        var printWindow = window.open('', '', 'height=400,width=800');
+        printWindow.document.write('<html><head><title>DIV content</title>');
+        printWindow.document.write('</head><body><div class="wrap">');
+        printWindow.document.write(content);
+        printWindow.document.write('</div></body></html>');
+        printWindow.document.close();
+        printWindow.print();
+    }
+</script>
+
+<style>
+    th, td {
+        font-size: 18px;
+        border: 2px solid grey;
+        padding: 10px;
+    }
+
+    input {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+</style>

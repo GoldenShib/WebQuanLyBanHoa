@@ -1,0 +1,565 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Hoa Tươi | CLMCA</title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="~/Content/js/jquery.min.js"></script>
+    <!-- Custom Theme files -->
+    <!--theme-style-->
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="Wedding Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- start menu -->
+    <script src="~/Content/js/simpleCart.min.js"></script>
+    <!-- start menu -->
+    <link href="~/Content/css/memenu.css" rel="stylesheet" type="text/css" media="all">
+    <script type="text/javascript" src="~/Content/js/memenu.js"></script>
+    <script>$(document).ready(function () { $(".memenu").memenu(); });</script>
+    <!-- /start menu -->
+    <link href="~/Content/css/form.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+<body>
+    <!--header-->
+    <div class="top_bg" style="background: radial-gradient(circle, rgba(239,126,217,1) 0%, rgba(142,124,207,1) 100%); ">
+        @Html.Partial("~/Views/Layout/HeaderTopPartial.cshtml")
+        <!--<div class="container">
+        <div class="header_top-sec">-->
+        @*<div class="top_right">
+                <ul>
+                    <li><a href="#">help</a></li>|
+                    <li><a href="contact.html">Contact</a></li>|
+                    <li><a href="login.html">Track Order</a></li>
+                </ul>
+            </div>*@
+        <!--<div class="top_left">
+                    <ul>
+                        <li class="top_link">Email:<a href="mailto:nhk06052001@gmail.com">nhk06052001@gmail.com</a></li>|
+                        <li class="top_link"><a href="login.html">My Account</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>-->
+    </div>
+    <div class="header-top">
+        <div class="header-bottom">
+            <div class="container" style="padding-left:0;padding-right:0;">
+                <div class="logo">
+                    <a href="@Url.Action("Index","Home")"><h1>Flower Shop</h1></a>
+                </div>
+                <!---->
+                @Html.Action("MenuPartial", "Home")
+                @*<div class="top-nav">
+                        <ul class="memenu skyblue">
+                            <li class="showhide" style="overflow: hidden; display: none;"><span class="title">MENU</span><span class="icon1"></span><span class="icon2"></span></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="active">
+                                <a href="#">Wedding</a>
+                                <div class="mepanel">
+                                    <div class="row">
+                                        <div class="col1 me-one">
+                                            <h4>Shop</h4>
+                                            <ul>
+                                                <li><a href="product.html">New Arrivals</a></li>
+                                                <li><a href="product.html">Men</a></li>
+                                                <li><a href="product.html">Women</a></li>
+                                                <li><a href="product.html">Accessories</a></li>
+                                                <li><a href="product.html">Kids</a></li>
+                                                <li><a href="login.html">login</a></li>
+                                                <li><a href="product.html">Brands</a></li>
+                                                <li><a href="product.html">My Shopping Bag</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col1 me-one">
+                                            <h4>Style Zone</h4>
+                                            <ul>
+                                                <li><a href="product.html">Men</a></li>
+                                                <li><a href="product.html">Women</a></li>
+                                                <li><a href="product.html">Brands</a></li>
+                                                <li><a href="product.html">Kids</a></li>
+                                                <li><a href="product.html">Accessories</a></li>
+                                                <li><a href="product.html">Style Videos</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col1 me-one">
+                                            <h4>Popular Brands</h4>
+                                            <ul>
+                                                <li><a href="product.html">Levis</a></li>
+                                                <li><a href="product.html">Persol</a></li>
+                                                <li><a href="product.html">Nike</a></li>
+                                                <li><a href="product.html">Edwin</a></li>
+                                                <li><a href="product.html">New Balance</a></li>
+                                                <li><a href="product.html">Jack &amp; Jones</a></li>
+                                                <li><a href="product.html">Paul Smith</a></li>
+                                                <li><a href="product.html">Ray-Ban</a></li>
+                                                <li><a href="product.html">Wood Wood</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="grid">
+                                <a href="#">Bride Style</a>
+                                <div class="mepanel">
+                                    <div class="row">
+                                        <div class="col1 me-one">
+                                            <h4>Shop</h4>
+                                            <ul>
+                                                <li><a href="product.html">New Arrivals</a></li>
+                                                <li><a href="product.html">Men</a></li>
+                                                <li><a href="product.html">Women</a></li>
+                                                <li><a href="product.html">Accessories</a></li>
+                                                <li><a href="product.html">Kids</a></li>
+                                                <li><a href="login.html">login</a></li>
+                                                <li><a href="product.html">Brands</a></li>
+                                                <li><a href="product.html">My Shopping Bag</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col1 me-one">
+                                            <h4>Style Zone</h4>
+                                            <ul>
+                                                <li><a href="product.html">Men</a></li>
+                                                <li><a href="product.html">Women</a></li>
+                                                <li><a href="product.html">Brands</a></li>
+                                                <li><a href="product.html">Kids</a></li>
+                                                <li><a href="product.html">Accessories</a></li>
+                                                <li><a href="product.html">Style Videos</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col1 me-one">
+                                            <h4>Popular Brands</h4>
+                                            <ul>
+                                                <li><a href="product.html">Levis</a></li>
+                                                <li><a href="product.html">Persol</a></li>
+                                                <li><a href="product.html">Nike</a></li>
+                                                <li><a href="product.html">Edwin</a></li>
+                                                <li><a href="product.html">New Balance</a></li>
+                                                <li><a href="product.html">Jack &amp; Jones</a></li>
+                                                <li><a href="product.html">Paul Smith</a></li>
+                                                <li><a href="product.html">Ray-Ban</a></li>
+                                                <li><a href="product.html">Wood Wood</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="grid"><a href="typo.html">Typo</a></li>
+                            <li class="grid"><a href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="clearfix"> </div>
+                    </div>*@
+                <!---->
+                @*chèn 1 partial view giỏ hàng(Tách icon giỏ hàng sang 1 partial view mới)*@
+                @Html.Action("GioHangPartial", "GioHang")
+                <div class="clearfix"> </div>
+                <!---->
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!---->
+    <!--header//-->
+    <div class="product-model">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                <li class="active">Products</li>
+            </ol>
+
+            @RenderBody()
+            @*<div class="col-md-9 product-model-sec">
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p1.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust prt_name">
+                        <h4>Jewellery #1</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p2.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Jewellery #1</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p3.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Jewellery #1</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p4.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Jewellery #1</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p5.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Jewellery #1</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p6.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Wedding Gownes</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p7.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Wedding Flowers</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p8.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Suits</h4>
+                        <p>ID: S4BJ87</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p9.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Sherwani</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p10.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Ethnic Wear</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p11.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Watches</h4>
+                        <p>ID: S4BJ87</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <a href="single.html"></a><div class="product-grid love-grid">
+                <a href="single.html">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="images/p12.jpg" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust">
+                        <h4>Jewellery #1</h4>
+                        <p>ID: SR4598</p>
+                        <span class="item_price">$187.95</span>
+                        <input type="text" class="item_quantity" value="1">
+                        <input type="button" class="item_add items" value="ADD">
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>*@
+            <div class="col-md-3 product-model-sec" style="border:1px solid grey; margin-bottom:30px;">
+                <div class="product-info-content-right">
+                    <div class="item-box shop-features-box">
+                        <h3 style="text-align: center;">Yên tâm mua sắm</h3>
+                        <ul style="padding:5px;margin:5px;">
+                            <li>
+                                <i class="fa fa-clock"></i>
+                                <strong>Dịch vụ hoàn hảo</strong>
+                            </li>
+                            <li>
+                                <i class="fa fa-money"></i>
+                                <strong>Giá cả cạnh tranh</strong>
+                            </li>
+                            <li>
+                                <i class="fa fa-car"></i>
+                                <strong>Điện hoa toàn quốc</strong>
+                            </li>
+                            <li>
+                                <i class="fa fa-life-ring"></i>
+                                <strong>Mẫu mã phong phú</strong>
+                            </li>
+                        </ul>
+                        <div class="widget-container">
+                            <h3 class="heading" style="text-align: center;">
+                                <span>Tư vấn mua hàng</span>
+                            </h3>
+                            <div class="widget text-widget" style="padding:5px;margin:5px;">
+                                <ul>
+                                    <li><span class="fa fa-phone"></span>&nbsp;<strong>Hotline: <p><span style="color:#FF0000;">0000 000 000 - 1111 111 111</span><span style="color:#FF0000;">&nbsp;</span></p></strong> </li>
+                                </ul>
+
+                                <ul>
+                                    <li><span class="fa fa-envelope"></span>&nbsp;<strong>Email</strong>: <a href="mailto:clmca@gmail.com">clmca@gmail.com</a></li>
+                                    <li><span class="fa fa-facebook"></span>&nbsp;<strong>Facebook</strong>: <a href="https://www.facebook.com/0608ltbq/">Hoa Tuoi CLMCA<sup>*</sup></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @*<div class="col-md-3 product-model-sec" style="border:1px solid grey;">
+                @Html.Partial("~/Views/SanPham/SanPhamStyle2Partial.cshtml")
+            </div>*@
+            </div>
+        </div>
+
+    <div class="shoping">
+        <div class="container">
+            <div class="shpng-grids">
+                <div class="col-md-4 shpng-grid">
+                    <h3 style="font-family:'Segoe UI'">Free Ship</h3>
+                    <p style="font-family:'Segoe UI'">Với đơn trên 350.000 đồng</p>
+                </div>
+                <div class="col-md-4 shpng-grid">
+                    <h3 style="font-family:'Segoe UI'">Đổi trả sản phẩm lỗi</h3>
+                    <p style="font-family:'Segoe UI'">Trong vòng 1h sau khi nhận hàng</p>
+                </div>
+                <div class="col-md-4 shpng-grid">
+                    <h3 style="font-family:'Segoe UI'">COD</h3>
+                    <p style="font-family:'Segoe UI'">Thanh toán khi nhận hàng</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="footer">
+        <div class="container">
+            <div class="ftr-grids">
+                <div class="col-md-4 ftr-grid">
+                    <h4>Về Chúng Tôi</h4>
+                    <p>
+                        Hoa tươi CLMCA chuyên tư vấn thiết kế và trang trí hoa tươi trong tất cả các lĩnh vực: hoa chúc mừng, hoa sinh nhật, hoa khai trương, hoa văn phòng, hoa sự kiện, hoa cưới, xe hoa, cổng hoa, hoa trang trí, đặc biệt là dịch vụ điện hoa toàn quốc…với nhiều mẫu hoa mới lạ, giá cả hợp lý.
+                    </p>
+                </div>
+                <div class="col-md-4 ftr-grid">
+                    <h4>Dịch vụ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Giao hàng</a></li>
+                        <li><a href="#">Huỷ đơn hàng</a></li>
+                        <li><a href="#">Đổi trả</a></li>
+                        <li><a href="#">Hướng dẫn</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 ftr-grid">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <ul>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Youtube</a></li>
+                    </ul>
+                </div>
+
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!---->
+    <div class="copywrite">
+        <div class="container">
+            <p>Copyright © 2015 Wedding Store. All Rights Reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

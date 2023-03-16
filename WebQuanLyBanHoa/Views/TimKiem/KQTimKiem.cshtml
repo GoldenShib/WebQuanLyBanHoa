@@ -1,0 +1,74 @@
+﻿@using WebQuanLyBanHoa.Models
+@using PagedList.Mvc;
+@model PagedList.IPagedList<SanPham>
+
+@{
+    ViewBag.Title = "KQTimKiem";
+    Layout = "~/Views/Layout/ProductLayout.cshtml";
+}
+
+<div style="clear:both;"></div>
+<div id="KQTimKiem">
+    <h2 style="font-family:'Segoe UI'">Danh sách sản phẩm</h2>
+    <div class="col-md-9 product-model-sec">
+        @foreach (var item in Model)
+        {
+            <a href="@Url.Action("XemChiTiet","SanPham", new { @id = item.MaSP})"></a><div class="product-grid love-grid">
+                <a href="@Url.RouteUrl("XemChiTiet", new { @id=item.MaSP, @tensp=item.TenSP})">
+                    <div class="more-product"><span> </span></div>
+                    <div class="product-img b-link-stripe b-animate-go  thickbox">
+                        <img src="@Url.Content("~/Content/HinhAnh/"+item.HinhAnh)" class="img-responsive" alt="">
+                        <div class="b-wrapper">
+                            <h4 class="b-animate b-from-left  b-delay03">
+                                <button class="btns"><span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span>Quick View</button>
+                            </h4>
+                        </div>
+                    </div>
+                </a>
+                <div class="product-info simpleCart_shelfItem">
+                    <div class="product-info-cust prt_name">
+                        <h4 style="font-family:'Segoe UI'">@item.TenSP</h4>
+                        <p>ID: @item.MaSP</p>
+                        <span class="item_price">@item.DonGia.Value.ToString("#,##")</span>
+                        @*<input type="text" class="item_quantity" value="1">*@
+                        <a href="@Url.Action("ThemGioHang","GioHang", new { @MaSP= item.MaSP, @strURL=Request.Url.ToString()})"><input type="button" class="item_add items" value="Thêm"></a>
+                    </div>
+
+                </div>
+            </div>
+        }
+        <div class="clearfix"> </div>
+        <div class="dlink">
+            Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+            @Html.PagedListPager(Model, page => Url.Action("KQTimKiem", new { page = page, @sTuKhoa = ViewBag.TuKhoa }))
+        </div>
+    </div>
+</div>
+
+<style>
+    #btnTimKiem{
+        background-color: #4cae4c;
+        color: #fff;
+        padding: 0;
+        font-size: 1.1em;
+        font-weight: 600;
+        margin-right: 0;
+        border-radius: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        padding: 3px;
+        margin-left: 8px;
+        height: 24px;
+    }
+    #txtTimKiem{
+        width: 300px;
+        border: 1px solid #000;
+    }
+    .top-right{
+        margin-bottom: 50px;
+    }
+</style>

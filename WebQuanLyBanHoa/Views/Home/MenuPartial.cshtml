@@ -1,0 +1,144 @@
+﻿@using WebQuanLyBanHoa.Models
+@model IEnumerable<SanPham>
+
+
+<div class="top-nav">
+    <ul class="memenu skyblue">
+        <li class="showhide" style="overflow: hidden; display: none;"><span class="title">MENU</span><span class="icon1"></span><span class="icon2"></span></li>
+        <li class="active"><a href="@Url.Action("Index","Home")" style="font-family:'Segoe UI'">Trang chủ</a></li>
+
+                <li class="grid">
+                    <a href="@Url.Action("SanPham","SanPham")" style="font-family:'Segoe UI'">Mới</a>
+                    
+
+                </li>
+
+
+            
+
+                <li class="grid">
+
+                    <a href="@Url.Action("SanPhamBanChay","SanPham")" style="font-family:'Segoe UI'">Bán chạy</a>
+                    
+                </li>
+
+        <li class="grid">
+            <a href="@Url.Action("TatCa","SanPham")" style="font-family:'Segoe UI';">Tất cả</a>
+            <div class="mepanel">
+                <div class="row">
+                    @foreach (var groupItem in Model.GroupBy(n => n.MaSP))
+                    {
+                        if (groupItem.Key != null)
+                        {
+                            <div class="col1 me-one">
+                                @*<h4>@groupItem.Key.Value</h4>*@
+                                <ul>
+                                    @foreach (var item in groupItem.GroupBy(x => x.TenSP))
+                                    {
+                                        if (item.Key != null)
+                                        {
+                                            <li><a href="@Url.Action("SanPham","SanPham")">@item.Key</a></li>
+
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+            @*<li class="grid">
+                    <a href="#">Wedding</a>
+                    <div class="mepanel">
+                        <div class="row">
+                            <div class="col1 me-one">
+                                <h4>Shop</h4>
+                                <ul>
+                                    <li><a href="product.html">New Arrivals</a></li>
+                                    <li><a href="product.html">Men</a></li>
+                                    <li><a href="product.html">Women</a></li>
+                                    <li><a href="product.html">Accessories</a></li>
+                                    <li><a href="product.html">Kids</a></li>
+                                    <li><a href="login.html">login</a></li>
+                                    <li><a href="product.html">Brands</a></li>
+                                    <li><a href="product.html">My Shopping Bag</a></li>
+                                </ul>
+                            </div>
+                            <div class="col1 me-one">
+                                <h4>Style Zone</h4>
+                                <ul>
+                                    <li><a href="product.html">Men</a></li>
+                                    <li><a href="product.html">Women</a></li>
+                                    <li><a href="product.html">Brands</a></li>
+                                    <li><a href="product.html">Kids</a></li>
+                                    <li><a href="product.html">Accessories</a></li>
+                                    <li><a href="product.html">Style Videos</a></li>
+                                </ul>
+                            </div>
+                            <div class="col1 me-one">
+                                <h4>Popular Brands</h4>
+                                <ul>
+                                    <li><a href="product.html">Levis</a></li>
+                                    <li><a href="product.html">Persol</a></li>
+                                    <li><a href="product.html">Nike</a></li>
+                                    <li><a href="product.html">Edwin</a></li>
+                                    <li><a href="product.html">New Balance</a></li>
+                                    <li><a href="product.html">Jack &amp; Jones</a></li>
+                                    <li><a href="product.html">Paul Smith</a></li>
+                                    <li><a href="product.html">Ray-Ban</a></li>
+                                    <li><a href="product.html">Wood Wood</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="grid">
+                    <a href="#">Bride Style</a>
+                    <div class="mepanel">
+                        <div class="row">
+                            <div class="col1 me-one">
+                                <h4>Shop</h4>
+                                <ul>
+                                    <li><a href="product.html">New Arrivals</a></li>
+                                    <li><a href="product.html">Men</a></li>
+                                    <li><a href="product.html">Women</a></li>
+                                    <li><a href="product.html">Accessories</a></li>
+                                    <li><a href="product.html">Kids</a></li>
+                                    <li><a href="login.html">login</a></li>
+                                    <li><a href="product.html">Brands</a></li>
+                                    <li><a href="product.html">My Shopping Bag</a></li>
+                                </ul>
+                            </div>
+                            <div class="col1 me-one">
+                                <h4>Style Zone</h4>
+                                <ul>
+                                    <li><a href="product.html">Men</a></li>
+                                    <li><a href="product.html">Women</a></li>
+                                    <li><a href="product.html">Brands</a></li>
+                                    <li><a href="product.html">Kids</a></li>
+                                    <li><a href="product.html">Accessories</a></li>
+                                    <li><a href="product.html">Style Videos</a></li>
+                                </ul>
+                            </div>
+                            <div class="col1 me-one">
+                                <h4>Popular Brands</h4>
+                                <ul>
+                                    <li><a href="product.html">Levis</a></li>
+                                    <li><a href="product.html">Persol</a></li>
+                                    <li><a href="product.html">Nike</a></li>
+                                    <li><a href="product.html">Edwin</a></li>
+                                    <li><a href="product.html">New Balance</a></li>
+                                    <li><a href="product.html">Jack &amp; Jones</a></li>
+                                    <li><a href="product.html">Paul Smith</a></li>
+                                    <li><a href="product.html">Ray-Ban</a></li>
+                                    <li><a href="product.html">Wood Wood</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>*@
+        </li>
+        <li class="grid"><a href="#" style="font-family:'Segoe UI'">Giới thiệu</a></li>
+        <li class="grid"><a href="#" style="font-family:'Segoe UI'">Liên hệ</a></li>
+    </ul>
+    <div class="clearfix"> </div>
+</div>
